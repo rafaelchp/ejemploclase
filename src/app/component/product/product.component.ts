@@ -43,6 +43,14 @@ export class ProductComponent implements OnInit {
       })
     )
 
+    this.subscription.add(
+      this.productSvc.viewProduct().subscribe((res)=>{
+        if(res){
+          console.log('res->', res);
+        }
+      })
+    )
+
   };
 
 }
