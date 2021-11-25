@@ -38,7 +38,7 @@ export class ProductController {
 
         try {
             await productRepository.save(product);
-            return res.status(200).json({message:'Product created successfully'});
+            return res.status(200).json({message:'Product created successfully', product});
         } catch (error) {
             return res.status(409).json({message: 'Error in code!'});
         }

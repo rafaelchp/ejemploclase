@@ -19,9 +19,22 @@ export class ProductService {
     return this.http
     .post<ProductI>(`${environment.API_URL}/products`, producto)
     .pipe(map((product:ProductI)=>{
-      console.log('Producto->', product)
+      console.log('Producto->', producto)
 
       return product;
     }));
   }
+
+  viewProduct():Observable<ProductI|void>{
+    return this.http
+          .get<ProductI>(`${environment.API_URL}/products`)
+      
+  }
+
+
+  // viewIdProduct(id:string):Observable<ProductI|void>{
+  //   return this.http
+  //         .get<ProductI>(`${environment.API_URL}/products/${id}`)
+      
+  // }
 }

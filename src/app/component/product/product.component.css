@@ -1,0 +1,26 @@
+.product-form{
+    padding:4rem 1rem;
+   /* background-image: linear-gradient(180deg, #00000098 0%, #020202fb 100%), url('../../../../assets/images/imgppal2.jpg');
+    background-size: cover;*/
+    
+
+
+}
+
+mat-card {
+    max-width: 300px;
+    margin: 2rem auto;
+    text-align: center;
+    height: 350px;
+    background: #f9f9f9;
+    
+}
+.full-width-input, button{
+       width: 100%; 
+
+       
+}
+
+.separator{
+    margin-bottom: 2rem;
+}

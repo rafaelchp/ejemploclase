@@ -1,1 +1,29 @@
-<>
+<div class="product-form">
+    <mat-card>
+        <mat-card-content>
+            <h3>Save Product</h3>
+    
+
+            <form [formGroup]="productForm" (ngSubmit)="onProduc()">
+                    <mat-form-field>
+                        <input matInput type="text" 
+                        formControlName="nombre"
+                        placeholder="Nombre del producto"
+                        
+                        required/>
+                    </mat-form-field>
+                    <mat-form-field>
+                        <input matInput type="text" 
+                        formControlName="precio"
+                        placeholder="Precio del producto"
+                        
+                        required/>
+                    </mat-form-field>
+            
+                <button [disabled]="productForm.invalid"
+                    type="submit" mat-raised-button color="primary">save</button>
+            </form>
+        </mat-card-content>
+    </mat-card>
+
+</div>
